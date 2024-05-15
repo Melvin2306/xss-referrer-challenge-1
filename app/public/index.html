@@ -48,8 +48,10 @@
 			var resultsEl = document.querySelector('#results');
 			var html = '';
 
+			var sanitizedQuery = escapeHtml(q);
+
 			html += '<p>Your search query:</p>';
-			html += '<pre>' + q + '</pre>';
+			html += '<pre>' + sanitizedQuery + '</pre>';
 			html += '<ul>';
 
 			for (var index = 0; index < results.length; index++) {
